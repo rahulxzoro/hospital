@@ -18,7 +18,6 @@ class Types(models.Model):
     name = models.CharField(max_length=255)
     mobile=models.IntegerField(max_length=10)
     date=models.DateField(auto_now_add=True)
-    slug=models.SlugField(max_length=250,unique=True)
 
     def __str__(self):
         return '{}'.format(self.name)

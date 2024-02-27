@@ -10,9 +10,7 @@ admin.site.register(Category,CategoryAdmin)
 
 
 class TypesAdmin(admin.ModelAdmin):
-    
-    prepopulated_fields={'slug':('name',)}
-    
-    
-admin.site.register(Types,TypesAdmin)
+        
+    pass
+admin.site.register(Types, TypesAdmin)
 
