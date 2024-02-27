@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/service.css' %}">
+    <title>hospital</title>
+</head>
+<body>
+    {% include 'nav.html' %} 
+
+    <div class="container-fluid main">
+    <div class="row">
+    <div class="col-lg-12">
+        <div class="bg">
+    <img class="front" src="{{category.bgimage.url}}" alt="image">
+
+    <div class="dark-overlay"></div>
+    <div class="overlay-content">
+        <h1 class="head">{{category.name}}</h1>
+        <h5 class="desc">Only 2% of the Labs in India are NABL Approved. We are one <br> among them.</h5>
+        <button class="b1"><b>About US</b></button><button class="b2"><b>Our Services</b></button>
+        <div class="noo">
+            <p>support line</p>
+            <p class="number"><i class="bi bi-telephone-fill"></i><b> 0484-235-2357</b></p>
+        </div>
+        <div class="no">
+        </div>
+    </div>
+
+    <div class="boo">
+        <form method="POST" action="{% url 'services:service' %}">
+          {% csrf_token %} 
+            <h5><b>Book An Appointment</b></h5>
+          <input type="text" id="name" name="name" placeholder="Name">
+          <input type="text" id="mobile" name="mobile" placeholder="Mobile Number">
+          <input type="text" id="date" name="date" placeholder="DD/MM/YY">
+          <button type="submit" class="b3"><b>Submit</b></button>
+        </form>
+
+      </div>
+    </div>
+    </div>
+</div>
+</div>
+
+
+    <div class="container c1">
+        <div class="row">
+            <div class="col-lg-4 pre">
+                <img src="{% static 'images/img2.jpg' %}" alt="">
+            </div>
+            <div class="col-lg-8 dee">
+                <h1>{{category.name}}</h1>
+                <p>{{category.desc}}</p>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: #039582; color: white;" class="mt-5">
+        <div class="container">
+          <div class="row p-5">
+            <div class="col-md-6">
+              <h4>Primedical Diagnostics</h4>
+              <p>Address: kochi ,kerala ,india</p>
+              <p>Phone: (123) 456-7890</p>
+              <p>Email: info@primedicaldiagnostics.com</p>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-inline text-right">
+                <li class="list-inline-item"><a href="#" style="color: white;">Home</a></li>
+                <li class="list-inline-item"><a href="#" style="color: white;">About Us</a></li>
+                <li class="list-inline-item"><a href="#" style="color: white;">Services</a></li>
+                <li class="list-inline-item"><a href="#" style="color: white;">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <p>&copy; 2024 Primedical Diagnostics. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

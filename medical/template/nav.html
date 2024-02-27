@@ -1,0 +1,46 @@
+{% load static %}
+    <nav class="navbar bg-white">
+
+        <div class="container-fluid nb">
+          <div class="col-lg-12 c">
+            <h5 class="young">Kochi’s Youngest NABL Accredited Laboratory</h5>
+          </div>
+          <div class="row r1">
+            <div class="col-lg-12 d-flex align-items-center justify-content-between">
+          <a class="navbar-brand" href="{% url 'services:home' %}">
+            <img  class="logo" src="{% static 'images/Logo-1.svg' %}" alt="logo" width="200" height="120">
+          </a>
+          <div class="icons"><i class="bi bi-facebook"></i><i class="bi bi-instagram"></i><i class="bi bi-twitter"></i></div>
+          <button class="book">BOOK  AN APPOINTMENT</button>
+          <button class="lo">LOCATE ON MAP</button>
+
+          <form action="/search" method="get" id="searchForm">
+            <div class="search-container">
+              <input type="text" class="search-box" name="q" placeholder="Search...">
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      
+      <div class="additional-nav">
+        <a href="#">About</a>
+        <div class="dropdown">
+            <a class="dropbtn" >Our Services <i class="bi bi-caret-down"></i></a>
+            <div class="dropdown-content">
+              {% for i in cat %}
+              <a href="{{i.get_url}}">{{i.name}}</a>
+              {% endfor %}
+            </div>
+        </div>
+        <a href="#">Tele-radiology</a>
+        <a href="#">Health Checkup Packages</a>
+        <a href="#">Doctor Consultations</a>
+        <a href="#">Gallery</a>
+        <a href="#">Partner With Us</a>
+        <a href="#">Contact us</a>
+    </div>
+</div>
+    </nav>
+ 
