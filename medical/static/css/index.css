@@ -170,28 +170,53 @@
   color: #006659;
 }
 
-@media only screen and(max-width:768px)
-{
+@media screen and (min-width: 768px) 
+  {
 
-  .front 
-{
+  .boo {
+    z-index: 2;
     position: absolute;
+    left: 18cm;
     top: 7cm;
-    width: 100%;
-    border-bottom-left-radius: 10%; 
-    border-bottom-right-radius: 10%;
-    
+    width: 380px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+ 
+  .overlay-content 
+  {
+    position: absolute;
+    top:  60%;
+    left: 10%;
+    bottom: -5cm;
+    z-index: 2;
+  }
+
+  .c1 
+ {
+  margin-top: 20cm;
+ }
+ .dee 
+{
+  
+  padding: 1cm;
+  color: #006659;
+}
 }
 
-.dark-overlay {
-  position: absolute;
-  z-index: 1;
-  top: 4cm;
-  width: 100%;
-  height: 60%;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-bottom-left-radius: 10%; 
-  border-bottom-right-radius: 10%; 
-}
-
+@media  screen and(min-width:576px) {
+  .boo {
+    z-index: 2;
+    position: absolute;
+    left: 1rem;
+    top: 7cm;
+    width: 200px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+ 
 }

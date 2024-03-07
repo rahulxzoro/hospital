@@ -36,10 +36,10 @@
         <form method="POST">
           {% csrf_token %} 
             <h5><b>Book An Appointment</b></h5>
-          <input type="text" id="name" name="name" placeholder="Name">
-          <input type="text" id="mobile" name="mobile" placeholder="Mobile Number">
-          <input type="text" id="date" name="date" placeholder="DD/MM/YY">
-          <button type="submit" class="b3"><b>Submit</b></button>
+          <input type="text" id="name" name="name" placeholder="Name" required>
+          <input type="text" id="mobile" name="mobile" placeholder="Mobile Number" required>
+          <input type="date" id="date" name="date" placeholder="DD/MM/YY" required>
+          <button  type="submit" class="b3"><b>Submit</b></button>
         </form>
 
       </div>
